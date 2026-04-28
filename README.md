@@ -11,7 +11,14 @@ API REST em Spring Boot para criar vendas e consultar um resumo de vendas por ve
 - H2 Database
 - JUnit e MockMvc
 
+## Pre-requisitos
+
+- Java 17 ou superior instalado
+- Terminal aberto na raiz do projeto, onde ficam os arquivos `pom.xml`, `mvnw` e `mvnw.cmd`
+
 ## Como executar
+
+Linux/macOS:
 
 ```bash
 ./mvnw spring-boot:run
@@ -19,8 +26,8 @@ API REST em Spring Boot para criar vendas e consultar um resumo de vendas por ve
 
 No Windows:
 
-```bash
-mvnw.cmd spring-boot:run
+```powershell
+.\mvnw.cmd spring-boot:run
 ```
 
 A API fica disponivel em `http://localhost:8080`.
@@ -82,6 +89,38 @@ Os comandos abaixo apenas executam os testes automatizados e encerram o processo
 
 No Windows:
 
-```bash
-mvnw.cmd test
+```powershell
+.\mvnw.cmd test
 ```
+# Sales API
+
+API REST desenvolvida em Spring Boot para gerenciamento de vendas e consulta de resumo por vendedor em um período informado.
+
+> Foi incluída uma interface web simples apenas para facilitar a visualização e testes da API.
+
+---
+
+## 🚀 Tecnologias
+
+- Java 17
+- Spring Boot
+- Spring Web MVC
+- Spring Data JPA
+- H2 Database (em memória)
+- JUnit e MockMvc
+
+---
+
+## 📋 Pré-requisitos
+
+- Java 17 ou superior instalado
+- Terminal aberto na raiz do projeto (onde está o `pom.xml`)
+
+---
+
+## ▶️ Como executar
+
+### Linux/macOS
+
+```bash
+./mvnw spring-boot:run
