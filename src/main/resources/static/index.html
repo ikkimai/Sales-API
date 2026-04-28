@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales API</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="app-shell">
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">Sales API</p>
+            <h1>Vendas por vendedor</h1>
+        </div>
+        <span class="status" id="apiStatus">Pronta</span>
+    </header>
+
+    <section class="workspace">
+        <form class="panel" id="saleForm">
+            <div class="panel-header">
+                <h2>Nova venda</h2>
+            </div>
+
+            <label>
+                Data da venda
+                <input type="date" name="saleDate" required>
+            </label>
+
+            <label>
+                Valor
+                <input type="number" name="value" min="0.01" step="0.01" placeholder="125.50" required>
+            </label>
+
+            <label>
+                ID do vendedor
+                <input type="number" name="sellerId" min="1" step="1" placeholder="10" required>
+            </label>
+
+            <label>
+                Nome do vendedor
+                <input type="text" name="sellerName" placeholder="Ana Souza" required>
+            </label>
+
+            <button type="submit">Salvar venda</button>
+            <p class="message" id="saleMessage" role="status"></p>
+        </form>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h2>Resumo</h2>
+            </div>
+
+            <form class="filters" id="summaryForm">
+                <label>
+                    Inicio
+                    <input type="date" name="startDate" required>
+                </label>
+                <label>
+                    Fim
+                    <input type="date" name="endDate" required>
+                </label>
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Vendedor</th>
+                        <th>Total</th>
+                        <th>Media diaria</th>
+                    </tr>
+                    </thead>
+                    <tbody id="summaryBody">
+                    <tr>
+                        <td colspan="3" class="empty">Nenhum periodo consultado.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="message" id="summaryMessage" role="status"></p>
+        </section>
+    </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

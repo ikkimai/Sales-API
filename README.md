@@ -25,6 +25,8 @@ mvnw.cmd spring-boot:run
 
 A API fica disponivel em `http://localhost:8080`.
 
+Ao abrir `http://localhost:8080` no navegador, uma interface simples permite criar vendas e consultar o resumo por periodo.
+
 ## Endpoints
 
 ### Criar venda
@@ -71,6 +73,8 @@ Resposta `200 OK`:
 `totalSales` representa a quantidade de vendas do vendedor no periodo. `dailySalesAverage` e calculada por `totalSales / quantidade de dias do periodo`, considerando as datas inicial e final.
 
 ## Testes
+
+Os comandos abaixo apenas executam os testes automatizados e encerram o processo. Eles nao iniciam a API para navegacao.
 
 ```bash
 ./mvnw test
